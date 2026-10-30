@@ -1,0 +1,39 @@
+# Build outputs
+/build/
+/out/
+/cmake-build-*/
+compile_commands.json
+
+# Runtime artifacts
+/logs/
+*.log
+*.pid
+*.stackdump
+
+# Binaries and object files
+*.exe
+*.dll
+*.lib
+*.a
+*.o
+*.obj
+*.pdb
+*.ilk
+*.gcda
+*.gcno
+*.gcov
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+CMakeUserPresets.json
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
