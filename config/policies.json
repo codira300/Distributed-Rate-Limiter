@@ -1,0 +1,60 @@
+{
+  "policies": [
+    {
+      "id": "api-standard",
+      "algorithm": "token_bucket",
+      "capacity": 100,
+      "refill_tokens_per_second": 1.6666666667,
+      "default_cost": 1,
+      "max_cost": 10
+    },
+    {
+      "id": "api-burst",
+      "algorithm": "token_bucket",
+      "capacity": 20,
+      "refill_tokens_per_second": 5.0,
+      "default_cost": 1,
+      "max_cost": 5
+    },
+    {
+      "id": "tb-burst-100",
+      "algorithm": "token_bucket",
+      "capacity": 100,
+      "refill_tokens_per_second": 0.001,
+      "default_cost": 1,
+      "max_cost": 10
+    },
+    {
+      "id": "strict-100-per-10s",
+      "algorithm": "sliding_window",
+      "limit": 100,
+      "window_ms": 10000,
+      "default_cost": 1,
+      "max_cost": 10
+    },
+    {
+      "id": "strict-100-per-2s",
+      "algorithm": "sliding_window",
+      "limit": 100,
+      "window_ms": 2000,
+      "default_cost": 1,
+      "max_cost": 10
+    },
+    {
+      "id": "strict-20-per-1s",
+      "algorithm": "sliding_window",
+      "limit": 20,
+      "window_ms": 1000,
+      "default_cost": 1,
+      "max_cost": 5
+    },
+    {
+      "id": "guest-ip-30-per-minute",
+      "algorithm": "sliding_window",
+      "limit": 30,
+      "window_ms": 60000,
+      "default_cost": 1,
+      "max_cost": 3
+    }
+  ]
+}
