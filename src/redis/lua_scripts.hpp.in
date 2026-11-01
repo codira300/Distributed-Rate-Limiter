@@ -1,0 +1,13 @@
+#pragma once
+
+#include <string_view>
+
+namespace rl::scripts {
+
+inline constexpr std::string_view kTokenBucketName = "token_bucket_v1";
+inline constexpr std::string_view kTokenBucket = R"RL_LUA(@TOKEN_BUCKET_LUA@)RL_LUA";
+
+inline constexpr std::string_view kSlidingWindowName = "sliding_window_log_v1";
+inline constexpr std::string_view kSlidingWindow = R"RL_LUA(@SLIDING_WINDOW_LUA@)RL_LUA";
+
+} // namespace rl::scripts
